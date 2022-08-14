@@ -22,12 +22,14 @@ module.exports = {
     },
     output: {
         filename: 'bundle.js', // выходной бандл
+        publicPath: '/',
     },
     devServer: {
         static: {
             directory: path.join(__dirname, "public/"),
         },
         port: 3000,
+        historyApiFallback: true,
         devMiddleware: {
             publicPath: "https://localhost:3000/dist/",
         },

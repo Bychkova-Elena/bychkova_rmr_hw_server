@@ -1,10 +1,11 @@
 import React from "react";
+import Header from "../../features/header";
 
 const KittyScreen: React.FC = () => {
 
   return (
     <div>
-      Kitty
+      <Header></Header>
     </div>
   );
 };

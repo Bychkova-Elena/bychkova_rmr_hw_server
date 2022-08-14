@@ -1,5 +1,6 @@
 import React from "react";
 import { PropsWithChildren } from "react";
+import "./Button.css";
 
 export enum ButtonType {
   Button = "button",

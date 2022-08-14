@@ -1,0 +1,32 @@
+
+input{
+    width: 240px;
+    height: 50px;
+  
+    margin-top: 2%;
+    padding: 15px;
+    
+    font-size: 16px;
+    font-family: 'Abel', sans-serif;
+    color: #5E6472;
+  
+    outline: none;
+    border: none;
+  
+    border-radius: 0px 5px 5px 0px;
+    transition: 0.2s linear;
+    
+}
+
+input:focus {
+    transform: translateX(-2px);
+    border-radius: 5px;
+}
+
+.error {
+  display:block;
+  font-size: 13px;
+  font-family: 'Abel', sans-serif;
+  margin-bottom: 8%;
+  color:brown;
+}

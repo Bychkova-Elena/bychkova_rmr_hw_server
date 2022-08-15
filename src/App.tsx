@@ -7,6 +7,8 @@ import {
   Routes,
 } from "react-router-dom";
 import './ui-library/normalize.css';
+import Header from './features/header';
+import Footer from './features/footer';
 
 type KittyContextType = {
   isAuth: boolean;
@@ -30,6 +32,7 @@ export function App(): JSX.Element | null {
     return (
         <Provider value={{ isAuth, isLoading }}>
             <Router>
+                    <Header></Header>
                 <Routes>
                     <Route
                         path={routes.login.path}
@@ -39,9 +42,10 @@ export function App(): JSX.Element | null {
                         path={routes.kitty.path}
                         element={<routes.kitty.element/>}
                     />
-                    <Route path="/" element={<routes.login.element/>}/>
-                </Routes>
+                    <Route path="/" element={<routes.login.element />} />
+                        </Routes>
+                <Footer></Footer>
             </Router>
-        </Provider>
+            </Provider>
     )
 }

@@ -9,7 +9,7 @@ interface IField {
 const FieldView = ({fieldProps, inputProps, label}: FieldProps<IField>) => {
   return (
     <div>
-      <div>
+      <div className="label">
         <label>{label}</label>
       </div>
       <input {...inputProps} />
@@ -20,6 +20,6 @@ const FieldView = ({fieldProps, inputProps, label}: FieldProps<IField>) => {
 
 export default {
   Email: createField<IField>(FieldType.EMAIL, FieldView),
-  Phone: createField<IField>(FieldType.PHONE, FieldView),
+  Text: createField<IField>(FieldType.TEXT, FieldView),
   Pass: createField<IField>(FieldType.PASSWORD, FieldView)
 }

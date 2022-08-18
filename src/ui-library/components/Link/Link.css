@@ -1,0 +1,10 @@
+a {
+    color: #252537;
+    transition: all 0.2s linear;
+    letter-spacing: 0.05em;
+    font-size:18px;
+}
+
+a:hover {
+    text-decoration: overline;
+}

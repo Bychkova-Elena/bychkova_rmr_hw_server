@@ -8,7 +8,6 @@ import {
   Routes,
 } from "react-router-dom";
 import './ui-library/normalize.css';
-import Header from './features/header/components';
 import Footer from './features/footer/components';
 
 // export const App = hot(_App)
@@ -16,7 +15,6 @@ export function App(): JSX.Element | null {
 
     return (
             <Router>
-                    <Header></Header>
                 <Routes>
                     <Route
                         path={routes.login.path}

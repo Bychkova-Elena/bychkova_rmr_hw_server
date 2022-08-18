@@ -12,14 +12,14 @@ const LoginForm: React.FC = () => {
   let navigate = useNavigate();
 
   const handleSubmit = useCallback((values: any) => {
-      login(values)
-        .then(res => {
-          console.log(res.data);
+    login(values).then(() => {
           navigate(`${routes.kitty.create()}`);
         }).catch(e => {
           console.log(e);
-          alert("Вы не имеете права видеть нашего котика!");
-});
+          if (e.response.data.statusCode == 401) { 
+            alert('Вы не имеете права видеть нашего котика!\nДля вас мы оставили ссылку на котиков в футере.');
+          }
+        });
   }, []);
 
   return (
@@ -42,4 +42,4 @@ const LoginForm: React.FC = () => {
   );
 }
 
-export default LoginForm;
+export default React.memo(LoginForm);

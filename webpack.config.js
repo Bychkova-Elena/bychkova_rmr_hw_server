@@ -1,19 +1,25 @@
 const path = require('path')
 const webpack = require('webpack')
 
+
 module.exports = {
-    entry: './src/index.js', // точка входа, о которой говорилось ранее.
+    entry: './src/index.js', 
     mode: 'development',
     module: {
         rules: [
             {
-                test: /\.[jt]sx?$/, // сопоставляет файлы .js, .ts, и .tsx 
-                loader: 'babel-loader', // использует для указанных типов файлов загрузчик babel-loader (ts-loader не требуется).
+                test: /\.[jt]sx?$/, 
+                loader: 'babel-loader', 
                 exclude: /node_modules/, 
             },
             {
-                test: /\.css$/, // сопоставляет только файлы .css (т.е. не .scss и др.)
-                use: ['style-loader', 'css-loader'], 
+                test: /\.module\.s?css$/, 
+                use: ['style-loader', 'css-loader', 'sass-loader', 'postcss-loader'], 
+            },
+            {
+                test: /\.s?css$/,
+                exclude: /\.module\.s?.css$/, 
+                use: ['style-loader', 'css-loader', 'sass-loader', 'postcss-loader'], 
             },
         ],
     },
@@ -21,7 +27,7 @@ module.exports = {
         extensions: ['.tsx', '.ts', '.js'],
     },
     output: {
-        filename: 'bundle.js', // выходной бандл
+        filename: 'bundle.js',
         publicPath: '/',
     },
     devServer: {

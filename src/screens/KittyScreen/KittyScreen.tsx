@@ -1,6 +1,6 @@
 import HeaderIsAuth from "../../features/headerIsAuth/components";
 import React, { useEffect, useState } from "react";
-import "./KittyScreen.css"
+import styles from "./KittyScreen.module.scss";
 import { getKitty } from "../../features/kitty/kitty.service";
 
 const KittyScreen: React.FC = () => {
@@ -15,9 +15,9 @@ const KittyScreen: React.FC = () => {
   }), [];
 
   return (
-    <div className="kitty">
+    <div>
       <HeaderIsAuth></HeaderIsAuth>
-      <img src={img} />
+      <img src={img} className={ styles.kitty }/>
     </div>
   );
 };

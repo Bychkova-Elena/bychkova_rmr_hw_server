@@ -7,7 +7,7 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
-import './ui-library/normalize.css';
+import './ui-library/normalize.scss';
 import Footer from './features/footer/components';
 
 // export const App = hot(_App)

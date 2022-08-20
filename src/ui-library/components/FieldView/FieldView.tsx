@@ -1,6 +1,6 @@
 import React from "react";
 import { FieldProps, createField, FieldType } from '@altiore/form';
-import "./FieldView.css"
+import styles from "./FieldView.module.scss";
 
 interface IField {
   label: string;
@@ -9,11 +9,11 @@ interface IField {
 const FieldView = ({fieldProps, inputProps, label}: FieldProps<IField>) => {
   return (
     <div>
-      <div className="label">
+      <div className={ styles.label}>
         <label>{label}</label>
       </div>
       <input {...inputProps} />
-      <span className="error">{fieldProps.error}</span>
+      <span className={ styles.error}>{fieldProps.error}</span>
     </div>
   );
 };

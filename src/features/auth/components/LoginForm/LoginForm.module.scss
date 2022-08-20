@@ -7,9 +7,8 @@
     box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
     padding: 2%;
     background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%);
-}
 
-.form .con {
+    & .con {
     display: -webkit-flex;
     display: flex;
   
@@ -19,18 +18,19 @@
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
   
-      margin: 0 auto;
-}
+    margin: 0 auto;
 
-.head-form {
+    & .headForm {
     margin: 2% auto 2% auto;
     text-align: center;
-}
 
-.head-form h2 {
+    & h2 {
     font-size: 250%;
     font-family: 'Playfair Display', serif;
     color: #3e403f;
 }
 
-.head-form p {letter-spacing: 0.05em;}
+    & p {letter-spacing: 0.05em;}
+}
+}
+}

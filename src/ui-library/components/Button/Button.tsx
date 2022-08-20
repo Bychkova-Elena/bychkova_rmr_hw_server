@@ -1,6 +1,6 @@
 import React from "react";
 import { PropsWithChildren } from "react";
-import "./Button.css";
+import styles from "./Button.module.scss";
 
 export enum ButtonType {
   Button = "button",
@@ -19,7 +19,7 @@ const Button: React.FC<ButtonProps> = ({
   onClick = () => {},
   children,
   disabled = false,
-  className,
+  className = styles.btn,
   type
 }) => (
   <button onClick={onClick} disabled={disabled} className={className} type={ type }>

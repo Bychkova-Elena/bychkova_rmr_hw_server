@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "../../../ui-library/components/Link";
-import "./Footer.css";
+import "./Footer.scss";
 
 const Footer = () => { 
 

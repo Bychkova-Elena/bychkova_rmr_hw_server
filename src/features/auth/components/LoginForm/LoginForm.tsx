@@ -2,7 +2,7 @@ import React, { useCallback } from "react";
 import FieldView from "../../../../ui-library/components/FieldView";
 import Button, { ButtonType } from "../../../../ui-library/components/Button";
 import { Form, isEmail, isRequired } from "@altiore/form";
-import "./LoginForm.css"
+import styles from "./LoginForm.module.scss";
 import routes from "../../../../infrastructure/routes/routes";
 import { useNavigate } from "react-router-dom";
 import { validPassword, validPhone } from "../../auth.validators";
@@ -24,9 +24,9 @@ const LoginForm: React.FC = () => {
 
   return (
     <div>
-      <Form onSubmit={handleSubmit} className="form">
-        <div className="con">
-          <div className="head-form">
+      <Form onSubmit={handleSubmit} className={ styles.form }>
+        <div className={ styles.con }>
+          <div className={ styles.headForm }>
             <h2>Log In</h2>
             <p>Do you want a kitty? Go ahead!</p>
           </div>

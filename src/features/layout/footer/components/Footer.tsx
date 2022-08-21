@@ -1,8 +1,8 @@
 import React from "react";
-import Link from "../../../ui-library/components/Link";
+import { Link } from "../../../../ui-library/components/Link";
 import "./Footer.scss";
 
-const Footer = () => { 
+export const Footer = () => { 
 
   return (
     <footer>
@@ -10,5 +10,3 @@ const Footer = () => {
     </footer>
   )
 }
-
-export default React.memo(Footer);

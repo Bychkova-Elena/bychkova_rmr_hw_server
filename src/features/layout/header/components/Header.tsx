@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.scss";
 
-const Header: React.FC = () => {
+export const Header: React.FC = () => {
   
   return (
     <header>
@@ -9,5 +9,3 @@ const Header: React.FC = () => {
     </header>
   )
 }
-
-export default React.memo(Header);

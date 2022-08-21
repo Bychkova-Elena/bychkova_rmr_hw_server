@@ -1,3 +1,1 @@
-export { default } from "./FieldView";
-
-export * from "./FieldView";
+export { FieldView } from "./FieldView";

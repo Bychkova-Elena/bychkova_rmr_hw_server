@@ -15,7 +15,7 @@ type ButtonProps = PropsWithChildren<{
   type?: ButtonType; 
 }>;
 
-const Button: React.FC<ButtonProps> = ({
+export const Button: React.FC<ButtonProps> = React.memo(({
   onClick = () => {},
   children,
   disabled = false,
@@ -25,6 +25,4 @@ const Button: React.FC<ButtonProps> = ({
   <button onClick={onClick} disabled={disabled} className={className} type={ type }>
     {children}
   </button>
-);
-
-export default React.memo(Button);
+));

@@ -1,4 +1,7 @@
 .kitty {
   margin: 4rem;
-  width:300px;
+  
+  & img {
+    width:300px;
+  }
 }

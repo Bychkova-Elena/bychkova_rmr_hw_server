@@ -1,7 +1,7 @@
-import KittyScreen from "../../screens/KittyScreen";
-import LoginScreen from "../../screens/LoginScreen";
+import { KittyScreen } from "../../screens/KittyScreen";
+import { LoginScreen } from "../../screens/LoginScreen";
 
-const routes = {
+export const routes = {
   login: {
     path: "/login",
     element: LoginScreen,
@@ -14,5 +14,3 @@ const routes = {
     create: () => `/kitty`
   }
 };
-
-export default routes;

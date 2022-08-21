@@ -6,7 +6,7 @@ interface IField {
   label: string;
 }
 
-const FieldView = ({fieldProps, inputProps, label}: FieldProps<IField>) => {
+const Field = ({fieldProps, inputProps, label}: FieldProps<IField>) => {
   return (
     <div>
       <div className={ styles.label}>
@@ -18,8 +18,8 @@ const FieldView = ({fieldProps, inputProps, label}: FieldProps<IField>) => {
   );
 };
 
-export default {
-  Email: createField<IField>(FieldType.EMAIL, FieldView),
-  Text: createField<IField>(FieldType.TEXT, FieldView),
-  Pass: createField<IField>(FieldType.PASSWORD, FieldView)
+export const FieldView = {
+  Email: createField<IField>(FieldType.EMAIL, Field),
+  Text: createField<IField>(FieldType.TEXT, Field),
+  Pass: createField<IField>(FieldType.PASSWORD, Field)
 }

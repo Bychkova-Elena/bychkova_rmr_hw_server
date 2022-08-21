@@ -1,1 +1,1 @@
-export { default } from "./KittyScreen";
+export { KittyScreen } from "./KittyScreen";

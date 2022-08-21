@@ -7,8 +7,6 @@ type LinkProps = PropsWithChildren<{
   className?: string;
 }>;
 
-const Link: React.FC<LinkProps> = ({ href, className = styles.link, children }) => (
+export const Link: React.FC<LinkProps> = React.memo(({ href, className = styles.link, children }) => (
   <a href={href} className={ className }> {children}</a>
-);
-
-export default React.memo(Link);
+));

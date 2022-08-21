@@ -1,4 +1,4 @@
-import API from "../../infrastructure/request/request.service";
+import { API } from "../../infrastructure/request/request.service";
 import { KittyImg } from "./kitty.entity";
 
 export const getKitty = async (): Promise<KittyImg> => {

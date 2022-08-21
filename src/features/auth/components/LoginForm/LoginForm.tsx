@@ -1,25 +1,24 @@
 import React, { useCallback } from "react";
-import FieldView from "../../../../ui-library/components/FieldView";
-import Button, { ButtonType } from "../../../../ui-library/components/Button";
+import { FieldView } from "../../../../ui-library/components/FieldView";
+import { Button, ButtonType } from "../../../../ui-library/components/Button";
 import { Form, isEmail, isRequired } from "@altiore/form";
 import styles from "./LoginForm.module.scss";
-import routes from "../../../../infrastructure/routes/routes";
+import { routes } from "../../../../infrastructure/routes/routes";
 import { useNavigate } from "react-router-dom";
 import { validPassword, validPhone } from "../../auth.validators";
 import { login } from "../../auth.service";
 
-const LoginForm: React.FC = () => { 
+export const LoginForm: React.FC = () => { 
   let navigate = useNavigate();
 
   const handleSubmit = useCallback((values: any) => {
     login(values).then(() => {
-          navigate(`${routes.kitty.create()}`);
-        }).catch(e => {
-          console.log(e);
-          if (e.response.data.statusCode == 401) { 
-            alert('Вы не имеете права видеть нашего котика!\nДля вас мы оставили ссылку на котиков в футере.');
-          }
-        });
+      navigate(`${routes.kitty.create()}`);
+    }).catch(e => {
+      if (e.response.data.statusCode == 401) {
+        alert('Вы не имеете права видеть нашего котика!\nДля вас мы оставили ссылку на котиков в футере.');
+      }
+    });
   }, []);
 
   return (
@@ -41,5 +40,3 @@ const LoginForm: React.FC = () => {
 
   );
 }
-
-export default React.memo(LoginForm);

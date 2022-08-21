@@ -1,25 +1,27 @@
-import HeaderIsAuth from "../../features/headerIsAuth/components";
-import React, { useEffect, useState } from "react";
+import { HeaderIsAuth } from "../../features/layout/headerIsAuth/components";
+import React, { useEffect } from "react";
 import styles from "./KittyScreen.module.scss";
 import { getKitty } from "../../features/kitty/kitty.service";
+import { useQuery } from 'react-query';
+import { useNavigate } from "react-router-dom";
+import { routes } from "./../../infrastructure/routes/routes";
 
-const KittyScreen: React.FC = () => {
-  const [img, setImg] = useState("");
+export const KittyScreen: React.FC = () => {
+  
+  let navigate = useNavigate();
+  const { isLoading, isError, isSuccess, data } = useQuery('kitty', getKitty);
 
-  useEffect(() => {
-    getKitty().then((response) => {
-        setImg(response.src)
-      }).catch(e => {
-        console.log(e);
-      });
-  }), [];
+    if (isError) { 
+      navigate(`${routes.login.create()}`);
+    }
 
   return (
     <div>
       <HeaderIsAuth></HeaderIsAuth>
-      <img src={img} className={ styles.kitty }/>
+      <div className={styles.kitty}>
+        {isSuccess && <img src={data.src} />}
+        {isLoading && <p>Loading..</p>}
+      </div>
     </div>
   );
 };
-
-export default KittyScreen;

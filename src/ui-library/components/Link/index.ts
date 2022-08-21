@@ -1,3 +1,1 @@
-export { default } from "./Link";
-
-export * from "./Link";
+export { Link } from "./Link";

@@ -1,0 +1,1 @@
+export { HeaderIsAuth } from "./HeaderIsAuth";

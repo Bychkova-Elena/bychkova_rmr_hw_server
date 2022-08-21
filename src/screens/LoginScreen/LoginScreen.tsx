@@ -1,8 +1,8 @@
-import LoginForm from "../../features/auth/components/LoginForm";
+import { LoginForm } from "../../features/auth/components/LoginForm";
 import React from "react";
-import Header from "../../features/header/components";
+import { Header } from "../../features/layout/header/components";
 
-const LoginScreen: React.FC = () => {
+export const LoginScreen: React.FC = () => {
 
   return (
     <div>
@@ -12,5 +12,3 @@ const LoginScreen: React.FC = () => {
 
   );
 };
-
-export default LoginScreen;

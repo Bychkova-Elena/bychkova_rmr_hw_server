@@ -1,4 +1,4 @@
-import API from "../../infrastructure/request/request.service";
+import { API } from "../../../infrastructure/request/request.service";
 import { UserProfile } from "./headerIsAuth.entity";
 
 export const getUserName = async (): Promise<UserProfile> => {

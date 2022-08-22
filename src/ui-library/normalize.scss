@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html {
-    position: relative;
-    min-height: 100%;
+  position: relative;
+  min-height: 100%;
 }
 
 body {
@@ -19,10 +19,10 @@ body {
   font-family: 'Vibur', cursive;
   font-family: 'Abel', sans-serif;
   opacity: .95;
-  margin: 0 0 8em; 
+  margin: 0 0 8em;
   /* background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);  */
 }
 
 a {
-  text-decoration:none;
+  text-decoration: none;
 }

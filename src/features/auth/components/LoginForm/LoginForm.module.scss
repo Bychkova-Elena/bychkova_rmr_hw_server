@@ -9,28 +9,30 @@
     background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%);
 
     & .con {
-    display: -webkit-flex;
-    display: flex;
-  
-    -webkit-justify-content: space-around;
-    justify-content: space-around;
-  
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-  
-    margin: 0 auto;
+        display: -webkit-flex;
+        display: flex;
 
-    & .headForm {
-    margin: 2% auto 2% auto;
-    text-align: center;
+        -webkit-justify-content: space-around;
+        justify-content: space-around;
 
-    & h2 {
-    font-size: 250%;
-    font-family: 'Playfair Display', serif;
-    color: #3e403f;
-}
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
 
-    & p {letter-spacing: 0.05em;}
-}
-}
+        margin: 0 auto;
+
+        & .headForm {
+            margin: 2% auto 2% auto;
+            text-align: center;
+
+            & h2 {
+                font-size: 250%;
+                font-family: 'Playfair Display', serif;
+                color: #3e403f;
+            }
+
+            & p {
+                letter-spacing: 0.05em;
+            }
+        }
+    }
 }

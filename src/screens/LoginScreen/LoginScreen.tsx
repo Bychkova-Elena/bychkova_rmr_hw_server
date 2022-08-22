@@ -1,6 +1,6 @@
 import { LoginForm } from "../../features/auth/components/LoginForm";
 import React from "react";
-import { Header } from "../../features/layout/header/components";
+import { Header } from "../../features/layout/components/Header";
 
 export const LoginScreen: React.FC = () => {
 

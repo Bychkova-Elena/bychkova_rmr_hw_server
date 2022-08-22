@@ -5,7 +5,7 @@ import "./Footer.scss";
 export const Footer = () => { 
 
   return (
-    <footer>
+    <footer className="footer">
       <Link href="https://youtube.com/c/Kittisaurus">More kittens</Link>
     </footer>
   )

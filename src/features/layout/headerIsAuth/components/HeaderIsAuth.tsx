@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { routes } from "../../../../infrastructure/routes/routes";
 import { getUserName, logout } from "../headerIsAuth.service";
 import { useQuery } from 'react-query';
-import { useUserContext } from "../../../../App";
+import { useUserContext } from "../../../../screens/KittyScreen/KittyScreen";
 
 export const HeaderIsAuth: React.FC = () => {
   const context = useUserContext();
@@ -13,12 +13,12 @@ export const HeaderIsAuth: React.FC = () => {
   let navigate = useNavigate();
 
   if (data) { 
-    context.setName(data.name);
+    context.name = data.name;
   }
 
   const handleLogOut = useCallback(() => {
     logout().then(() => {
-       context.setName("");
+       context.name = "";
        navigate(`${routes.login.create()}`);
       }).catch(e => {
         console.log(e);

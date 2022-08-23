@@ -8,7 +8,7 @@ import {
   Routes,
 } from "react-router-dom";
 import './ui-library/normalize.scss';
-import { Footer } from './features/layout/footer/components';
+import { Footer } from './features/layout/components/Footer';
 import { QueryClient, QueryClientProvider} from 'react-query';
 
 

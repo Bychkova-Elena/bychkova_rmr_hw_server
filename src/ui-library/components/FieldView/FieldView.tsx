@@ -12,7 +12,7 @@ const Field = ({fieldProps, inputProps, label}: FieldProps<IField>) => {
       <div className={ styles.label}>
         <label>{label}</label>
       </div>
-      <input {...inputProps} />
+      <input {...inputProps} className={ styles.input} />
       <span className={ styles.error}>{fieldProps.error}</span>
     </div>
   );

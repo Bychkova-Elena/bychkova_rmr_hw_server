@@ -10,7 +10,7 @@ import { useUserContext } from "../../../../screens/KittyScreen/KittyScreen";
 export const HeaderIsAuth: React.FC = () => {
   const context = useUserContext();
   const { isSuccess, data } = useQuery('userName', getUserName);
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
   if (data) { 
     context.name = data.name;

@@ -17,7 +17,7 @@ type ButtonProps = PropsWithChildren<{
 }>;
 
 export const Button: React.FC<ButtonProps> = React.memo(({
-  onClick = () => {},
+  onClick,
   children,
   disabled = false,
   className,

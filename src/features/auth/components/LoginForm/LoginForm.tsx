@@ -9,7 +9,7 @@ import { validPassword, validPhone } from "../../auth.validators";
 import { login } from "../../auth.service";
 
 export const LoginForm: React.FC = () => { 
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleSubmit = useCallback((values: any) => {
     login(values).then(() => {

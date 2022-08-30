@@ -1,5 +1,5 @@
 import { HeaderIsAuth } from "../../features/layout/headerIsAuth/components";
-import React, { createContext, useContext, useMemo, useState } from "react";
+import React, { createContext, useContext, useMemo } from "react";
 import styles from "./KittyScreen.module.scss";
 import { getKitty } from "../../features/kitty/kitty.service";
 import { useQuery } from 'react-query';
@@ -18,9 +18,9 @@ export const useUserContext = () => useContext(UserContext);
 
 export const KittyScreen: React.FC = () => {
   
-  let navigate = useNavigate();
+  const navigate = useNavigate();
   const { isLoading, isError, isSuccess, data } = useQuery('kitty', getKitty);
-  const [name, setName] = useState("");
+  const name = "";
     
     const value = useMemo(
     () => ({ name}), 

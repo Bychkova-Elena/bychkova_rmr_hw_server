@@ -1,0 +1,16 @@
+name: Lint and Docker Image
+
+on:
+  commit:
+    branches: ["master"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+      - name: Check code and build the Docker image
+      - run: |
+          npm run lint
+          docker build -t devops_hw .

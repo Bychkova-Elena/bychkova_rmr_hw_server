@@ -1,5 +1,5 @@
 export const validPassword = (value: string): string | undefined => {
-  let reg = /^[\w\dА-я]+$/;
+  const reg = /^[\w\dА-я]+$/;
   if (value === "" || value === undefined || value === null) {
     return "Обязательное поле";
   }
@@ -11,7 +11,7 @@ export const validPassword = (value: string): string | undefined => {
 };
 
 export const validPhone = (value: string): string | undefined => {
-  let reg =
+  const reg =
     /^(\+7|\+976)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
   if (value === "" || value === undefined || value === null) {
     return "Обязательное поле";
